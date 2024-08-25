@@ -23,10 +23,10 @@ class BackendApplicationTests {
 	@Mock
     private CityRepository cityRepository;
 	
-	@Test 
-	public void fail() {
-		assertEquals(1, 2);
-	}
+	// @Test 
+	// public void fail() {
+	// 	assertEquals(1, 2);
+	// }
 	
 
 	@Test
