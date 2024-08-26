@@ -14,7 +14,9 @@ services:
     ports:
       - 3003:8080
     env_file:
-      - .env
+      - path: .env
+        required: false
+      
   avianca-frontend:
     build:
       context: ../frontend
@@ -24,7 +26,8 @@ services:
     ports:
       - 3002:3000
     env_file:
-      - .env
+      - path: .env
+        required: false
     depends_on:
       - avianca-backend
 
