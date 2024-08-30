@@ -100,6 +100,7 @@ public class ApexController {
      */
     @GetMapping("/greeting")
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+        if (true) {bool myBool = true;}
         return new Greeting(counter.incrementAndGet(), String.format(template, agencyUrls));
     }
 
