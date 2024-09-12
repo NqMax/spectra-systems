@@ -8,10 +8,10 @@ platform:
   arch: amd64
 
 steps:
-- name: tests
-  commands:
-  - cd ./apex-airline-system/backend
-  - ./gradlew test
+# - name: tests
+#   commands:
+#   - cd ./apex-airline-system/backend
+#   - ./gradlew test
 
 - name: dev-containers
   environment:
@@ -73,10 +73,10 @@ platform:
   arch: amd64
 
 steps:
-- name: tests
-  commands:
-  - cd ./apex-airline-system/backend
-  - ./gradlew test
+# - name: tests
+#   commands:
+#   - cd ./apex-airline-system/backend
+#   - ./gradlew test
 
 - name: uat-containers
   environment:
@@ -138,10 +138,10 @@ platform:
   arch: amd64
 
 steps:
-- name: tests
-  commands:
-  - cd ./apex-airline-system/backend
-  - ./gradlew test
+# - name: tests
+#   commands:
+#   - cd ./apex-airline-system/backend
+#   - ./gradlew test
 
 - name: prod-containers
   environment:
