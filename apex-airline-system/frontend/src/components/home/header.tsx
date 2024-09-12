@@ -16,7 +16,8 @@ export async function Header() {
           <Image src={logo} alt="Chain Logo" width={60} height={60} />
           <div className="text-4xl text-foreground font-satisfy">{name}</div>
         </Link>
-        <HeaderNav />
+{/*         <HeaderNav /> */}
+        OMG
         <SignInButton />
       </div>
     </header>
