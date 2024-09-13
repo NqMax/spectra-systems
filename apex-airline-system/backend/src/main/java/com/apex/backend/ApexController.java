@@ -179,6 +179,10 @@ public class ApexController {
     public Object createUser(@RequestBody User user, @PathVariable String token) {
         String secretkey = "6LfqapMpAAAAABzyK_kit2nrY39Hg1_VTg92SBXR";
 
+	if (true) {
+		int num = 1;
+	}
+
         Connection conn = new OracleConnector(oracleUser).getConnection();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDateTime now = LocalDateTime.now();
