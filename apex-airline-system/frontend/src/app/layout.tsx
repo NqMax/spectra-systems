@@ -3,11 +3,16 @@ import { Inter } from "next/font/google";
 import { Satisfy } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/home/header";
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const satisfy = Satisfy({ weight:"400", subsets: ["latin"], variable: "--font-satisfy" });
+const satisfy = Satisfy({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-satisfy",
+});
 
 export const metadata: Metadata = {
   title: "Zen Hotels",
@@ -21,6 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script src="/instrumentation.js"></Script>
       <body className={`${inter.className} ${satisfy.variable} dark`}>
         <Header />
         {children}
