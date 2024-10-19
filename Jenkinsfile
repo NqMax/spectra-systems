@@ -8,6 +8,11 @@ pipeline {
     }
 
     stages {
+        stage('Debug') {
+            steps {
+                sh 'echo "Building branch: ${env.GIT_BRANCH}"'
+            }
+        }
         stage('dev') {
             when {
                 branch 'dev'
