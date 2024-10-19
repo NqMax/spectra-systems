@@ -11,6 +11,7 @@ pipeline {
         stage('Debug') {
             steps {
                 sh "echo ${env.GIT_BRANCH}"
+                sh "echo ${env.MONGODB_URI}"
             }
         }
 
