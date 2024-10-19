@@ -8,14 +8,9 @@ pipeline {
     }
 
     stages {
-        stage('Debug') {
-            steps {
-                sh "echo ${env.GIT_BRANCH}"
-            }
-        }
         stage('dev') {
             when {
-                branch 'dev'
+                branch 'origin/dev'
             }
             steps {
                 sh '''
@@ -31,7 +26,7 @@ pipeline {
 
         stage('uat') {
             when {
-                branch 'uat'
+                branch 'origin/uat'
             }
             steps {
                 sh '''
@@ -47,7 +42,7 @@ pipeline {
 
         stage('main') {
             when {
-                branch 'main'
+                branch 'origin/main'
             }
             steps {
                 sh '''
