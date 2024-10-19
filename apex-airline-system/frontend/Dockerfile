@@ -10,6 +10,18 @@ FROM node:${NODE_VERSION}
 
 WORKDIR /usr/src/app
 
+ARG MONGODB_URI
+ENV MONGODB_URI=${MONGODB_URI}
+
+ARG JWT_SECRET
+ENV JWT_SECRET=${JWT_SECRET}
+
+ARG DB_NAME
+ENV DB_NAME=${DB_NAME}
+
+ARG EMAIL_CREDENTIALS
+ENV EMAIL_CREDENTIALS=${EMAIL_CREDENTIALS}
+
 # Copy package.json and package-lock.json to the working directory.
 COPY package.json package-lock.json ./
 
