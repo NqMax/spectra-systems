@@ -10,6 +10,15 @@ FROM node:${NODE_VERSION}
 
 WORKDIR /usr/src/app
 
+# Copy package.json and package-lock.json to the working directory.
+COPY package.json package-lock.json ./
+
+# Download dependencies as a separate step to take advantage of Docker's caching.
+RUN npm install
+
+# Copy the rest of the source files into the image.
+COPY . .
+
 ARG MONGODB_URI
 ENV MONGODB_URI=${MONGODB_URI}
 
@@ -21,15 +30,6 @@ ENV DB_NAME=${DB_NAME}
 
 ARG EMAIL_CREDENTIALS
 ENV EMAIL_CREDENTIALS=${EMAIL_CREDENTIALS}
-
-# Copy package.json and package-lock.json to the working directory.
-COPY package.json package-lock.json ./
-
-# Download dependencies as a separate step to take advantage of Docker's caching.
-RUN npm install
-
-# Copy the rest of the source files into the image.
-COPY . .
 
 # Build the application.
 RUN npm run build
