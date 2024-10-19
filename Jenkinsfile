@@ -14,9 +14,9 @@ pipeline {
             }
         }
 
-        stage('origin/dev') {
+        stage('dev') {
             when {
-                branch 'origin/dev'
+                expression { env.GIT_BRANCH == 'origin/dev' }
             }
             steps {
                 sh '''
@@ -30,9 +30,9 @@ pipeline {
             }
         }
 
-        stage('origin/uat') {
+        stage('uat') {
             when {
-                branch 'origin/uat'
+                expression { env.GIT_BRANCH == 'origin/uat' }
             }
             steps {
                 sh '''
@@ -46,9 +46,9 @@ pipeline {
             }
         }
 
-        stage('origin/main') {
+        stage('prod') {
             when {
-                branch 'origin/main'
+                expression { env.GIT_BRANCH == 'origin/main' }
             }
             steps {
                 sh '''
