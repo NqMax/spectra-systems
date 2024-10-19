@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'host-computer'
+    }
 
     environment {
         MONGODB_URI = credentials('MONGODB_URI')
@@ -11,7 +13,6 @@ pipeline {
         stage('Debug') {
             steps {
                 sh "echo ${env.GIT_BRANCH}"
-                sh "echo ${env.MONGODB_URI}"
             }
         }
 
