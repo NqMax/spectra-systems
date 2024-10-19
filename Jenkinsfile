@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Debug') {
             steps {
-                sh 'echo "Building branch: ${env.GIT_BRANCH}"'
+                sh 'echo ${env.GIT_BRANCH}'
             }
         }
         stage('dev') {
