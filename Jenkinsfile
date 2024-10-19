@@ -8,7 +8,7 @@ pipeline {
     }
 
     stages {
-        stage('Dev') {
+        stage('dev') {
             when {
                 branch 'dev'
             }
@@ -24,7 +24,7 @@ pipeline {
             }
         }
 
-        stage('UAT') {
+        stage('uat') {
             when {
                 branch 'uat'
             }
@@ -40,7 +40,7 @@ pipeline {
             }
         }
 
-        stage('Prod') {
+        stage('main') {
             when {
                 branch 'main'
             }
