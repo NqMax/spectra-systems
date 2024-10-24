@@ -7,6 +7,7 @@ pipeline {
         MONGODB_URI = credentials('MONGODB_URI')
         JWT_SECRET = credentials('JWT_SECRET')
         DB_NAME = credentials('DB_NAME')
+        EMAIL_CREDENTIALS = credentials('EMAIL_CREDENTIALS')
     }
 
     stages {
@@ -73,6 +74,41 @@ pipeline {
                     docker run -d --name apex-frontend-prod -p 3005:3000 apex-frontend
                     docker run -d --name apex-backend-prod -p 3006:8080 apex-backend
                 '''
+            }
+        }
+    }
+
+    post {
+        failure {
+            script {
+                def subject = "Build Failure in ${env.JOB_NAME} (Build #${env.BUILD_NUMBER})"
+                def body = """
+                    Unfortunately, the build #${env.BUILD_NUMBER} for the job ${env.JOB_NAME} has failed.
+                    Job: ${env.JOB_NAME}
+                    Branch: ${env.GIT_BRANCH}
+                    Commit: ${env.GIT_COMMIT}
+                    Build Number: ${env.BUILD_NUMBER}
+                """
+
+                sh """
+                    curl -X POST https://api.mailersend.com/v1/email \\
+                    -H 'Content-Type: application/json' \\
+                    -H 'X-Requested-With: XMLHttpRequest' \\
+                    -H 'Authorization: Bearer "${EMAIL_CREDENTIALS}"' \\
+                    -d '{
+                        "from": {
+                            "email": "MS_T1HVro@trial-z3m5jgrp9eo4dpyo.mlsender.net"
+                        },
+                        "to": [
+                            {
+                                "email": "jflores@unis.edu.gt"
+                            }
+                        ],
+                        "subject": "${subject}",
+                        "text": "${body}",
+                        "html": "${body}"
+                    }'
+                """
             }
         }
     }
