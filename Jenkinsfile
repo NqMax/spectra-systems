@@ -7,7 +7,8 @@ pipeline {
         MONGODB_URI = credentials('MONGODB_URI')
         JWT_SECRET = credentials('JWT_SECRET')
         DB_NAME = credentials('DB_NAME')
-        EMAIL_CREDENTIALS = credentials('EMAIL_CREDENTIALS')
+        EMAIL_CREDENTIALS = credentials('EMAIL_CREDENTIALS')T
+        TEST_CREDENTIALS = credentials("TEST_CREDENTIALS")
     }
 
     stages {
@@ -94,14 +95,14 @@ pipeline {
                     curl -X POST https://api.mailersend.com/v1/email \\
                     -H 'Content-Type: application/json' \\
                     -H 'X-Requested-With: XMLHttpRequest' \\
-                    -H 'Authorization: Bearer "${EMAIL_CREDENTIALS}"' \\
+                    -H 'Authorization: Bearer pMRkVn6E5s3v4Yd5' \\
                     -d '{
                         "from": {
-                            "email": "MS_T1HVro@trial-z3m5jgrp9eo4dpyo.mlsender.net"
+                            "email": "MS_EDhTT6@trial-jpzkmgqro214059v.mlsender.net"
                         },
                         "to": [
                             {
-                                "email": "jflores@unis.edu.gt"
+                                "email": "mamarroquina@unis.edu.gt"
                             }
                         ],
                         "subject": "${subject}",
