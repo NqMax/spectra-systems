@@ -88,6 +88,9 @@ pipeline {
                     Branch: ${env.GIT_BRANCH}
                     Commit: ${env.GIT_COMMIT}
                     Build Number: ${env.BUILD_NUMBER}
+
+                    You can view the build details here:
+                    ${env.BUILD_URL}
                 """
 
                 sh """
