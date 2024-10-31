@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.2'
 	id 'io.spring.dependency-management' version '1.1.4'
+	id 'jacoco'
 	id 'org.sonarqube' version '5.0.0.4638'
 }
 
@@ -14,6 +15,12 @@ java {
 
 javadoc {
     destinationDir = file("./JAVADOC-Apex/javadoc")
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+    }
 }
 
 repositories {
@@ -37,6 +44,6 @@ sonar {
   properties {
     property "sonar.projectKey", "NqMax_spectra-systems_36ae9798-91ae-4358-a657-50addde2bc54"
     property "sonar.projectName", "spectra-systems"
-	property "sonar.token", "squ_416aa275c1ed0b1581f1a02c30af60096119b8ce"
+	property "sonar.token", "sqp_0721da3089e161805e3fbc9eca421e2b29931511"
   }
 }
