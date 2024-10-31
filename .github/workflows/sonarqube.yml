@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
       - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
@@ -40,10 +40,10 @@ jobs:
           curl -X POST https://api.mailersend.com/v1/email \
           -H 'Content-Type: application/json' \
           -H 'X-Requested-With: XMLHttpRequest' \
-          -H 'Authorization: Bearer mlsn.d76943fa47af8613d289ef360395b4eb9a47e5571ece88b2de9c3d57724b5bc1' \
+          -H 'Authorization: Bearer mlsn.3cc3a48ab4a1eb80c2d0a6b25d8ecd04b72da231170859cff3a49550fa96dfa0' \
           -d '{
               "from": {
-                  "email": "MS_jeaiMD@trial-z3m5jgrwnqoldpyo.mlsender.net"
+                  "email": "MS_2i236R@trial-z86org8v5y1lew13.mlsender.net"
               },
               "to": [
                   {
