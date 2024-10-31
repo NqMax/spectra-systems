@@ -17,7 +17,7 @@ export async function Header() {
           <div className="text-4xl text-foreground font-satisfy">{name}</div>
         </Link>
 {/*         <HeaderNav /> */}
-        Ciudad de los reyes - Sept 12 2024 - Magic - Master
+        Best Flights Worldwide
         <SignInButton />
       </div>
     </header>
