@@ -172,7 +172,7 @@ steps:
     -H 'Authorization: Bearer $API_TOKEN' \
     -d '{
         "from": {
-            "email": "MS_T1HVro@trial-z3m5jgrp9eo4dpyo.mlsender.net"
+            "email": "MS_jeaiMD@trial-z3m5jgrwnqoldpyo.mlsender.net"
         },
         "to": [
             {
