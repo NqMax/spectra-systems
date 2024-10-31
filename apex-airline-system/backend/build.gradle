@@ -35,7 +35,8 @@ tasks.named('test') {
 
 sonar {
   properties {
-    property "sonar.projectKey", "NqMax_spectra-systems_6720c765-bf25-44b5-b860-17edc7a3ac37"
+    property "sonar.projectKey", "NqMax_spectra-systems_36ae9798-91ae-4358-a657-50addde2bc54"
     property "sonar.projectName", "spectra-systems"
+	property "sonar.token", "squ_416aa275c1ed0b1581f1a02c30af60096119b8ce"
   }
 }
