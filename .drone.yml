@@ -39,19 +39,19 @@ steps:
     curl -X POST https://api.mailersend.com/v1/email \
     -H 'Content-Type: application/json' \
     -H 'X-Requested-With: XMLHttpRequest' \
-    -H 'Authorization: Bearer mlsn.846ef81ec938b22022c91b1636088159527f1ff5caa368c2590b623c32a8bd71' \
+    -H 'Authorization: Bearer mlsn.3cc3a48ab4a1eb80c2d0a6b25d8ecd04b72da231170859cff3a49550fa96dfa0' \
     -d '{
         "from": {
-            "email": "MS_T1HVro@trial-z3m5jgrp9eo4dpyo.mlsender.net"
+            "email": "MS_2i236R@trial-z86org8v5y1lew13.mlsender.net"
         },
         "to": [
             {
-                "email": "jflores@unis.edu.gt"
+                "email": "mamarroquina@unis.edu.gt"
             }
         ],
         "subject": "Build Failure in ${DRONE_REPO_NAME} (Build #${DRONE_BUILD_NUMBER})",
-        "text": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}",
-        "html": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}"
+        "text": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}. You can view the build details here: ${DRONE_BUILD_LINK}",
+        "html": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}. You can view the build details here: ${DRONE_BUILD_LINK}"
     }'
   when:
     status:
@@ -104,19 +104,19 @@ steps:
     curl -X POST https://api.mailersend.com/v1/email \
     -H 'Content-Type: application/json' \
     -H 'X-Requested-With: XMLHttpRequest' \
-    -H 'Authorization: Bearer mlsn.846ef81ec938b22022c91b1636088159527f1ff5caa368c2590b623c32a8bd71' \
+    -H 'Authorization: Bearer mlsn.3cc3a48ab4a1eb80c2d0a6b25d8ecd04b72da231170859cff3a49550fa96dfa0' \
     -d '{
         "from": {
-            "email": "MS_T1HVro@trial-z3m5jgrp9eo4dpyo.mlsender.net"
+            "email": "MS_2i236R@trial-z86org8v5y1lew13.mlsender.net"
         },
         "to": [
             {
-                "email": "jflores@unis.edu.gt"
+                "email": "mamarroquina@unis.edu.gt"
             }
         ],
         "subject": "Build Failure in ${DRONE_REPO_NAME} (Build #${DRONE_BUILD_NUMBER})",
-        "text": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}",
-        "html": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}"
+        "text": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}. You can view the build details here: ${DRONE_BUILD_LINK}",
+        "html": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}. You can view the build details here: ${DRONE_BUILD_LINK}"
     }'
   when:
     status:
@@ -181,7 +181,7 @@ steps:
         ],
         "subject": "Build Failure in ${DRONE_REPO_NAME} (Build #${DRONE_BUILD_NUMBER})",
         "text": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}. You can view the build details here: ${DRONE_BUILD_LINK}",
-        "html": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}"
+        "html": "Unfortunately, the build #${DRONE_BUILD_NUMBER} for the repository ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME} has failed. Repository: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}. Branch: ${DRONE_COMMIT_BRANCH}. Commit Hash: ${DRONE_COMMIT}. Build Number: ${DRONE_BUILD_NUMBER}. You can view the build details here: ${DRONE_BUILD_LINK}"
     }'
   when:
     status:
