@@ -44,6 +44,5 @@ sonar {
   properties {
     property "sonar.projectKey", "NqMax_spectra-systems_36ae9798-91ae-4358-a657-50addde2bc54"
     property "sonar.projectName", "spectra-systems"
-	property "sonar.token", "sqp_0721da3089e161805e3fbc9eca421e2b29931511"
   }
 }
